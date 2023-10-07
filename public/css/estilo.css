@@ -146,3 +146,27 @@ ul{
 		width: 100%;
 	}
 }
+
+
+
+/* <-- Navbar --> */
+.navbar-nav {
+	display: flex;
+	justify-content: center;
+	/* flex-grow: 1; */
+}
+
+.navbar-nav .nav-link {
+	margin: 0 20px; /* Adicione margem entre os nav-links se desejar */
+}
+
+.btn-publicar-livro{
+	padding: 7px;
+	background-color: #CA765E;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 10px;
+	width: 120px;
+	text-align: center;
+}
+
