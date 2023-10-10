@@ -1,0 +1,125 @@
+	<div class="cadastro-container">
+		<h1 style="padding: 0 0 2rem 0;">
+			Cadastro Livros
+		</h1>
+
+		<form id="formCadastro">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="titulo" class="cadastro-title">Titulo</label>
+					<input type="text" class="form-control" id="titulo" name="titulo" >
+				</div>
+				<div class="form-group col-md-6">
+					<label for="desc">Desc</label>
+					<input type="text" class="form-control" id="desc" name="desc" >
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="autor">Autor</label>
+					<input type="text" class="form-control" id="autor" name="autor">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="editora">Editora</label>
+					<input type="text" class="form-control" id="editora" name="editora">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="ano">Ano</label>
+					<input type="text" class="form-control" id="ano" name="ano">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="categoria">Categoria</label>
+					<select id="categoria" class="form-control" name="categoria">
+						<option value="regular">Doce</option>
+						<option value="conforto">Salgado</option>
+						<!-- <option value="luxo">Luxo</option>
+						<option value="trilha">Trilha</option>
+						<option value="modificado">Modificado</option>
+						<option value="auto_escola">Auto escola</option> -->
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="imagem">Imagem</label>
+					<div class="custom-file">
+						<input class="form-control-file" type="file" id="imagem" name="imagem" accept="image/*"/>
+						<label class="custom-file-label" for="imagem">Adicionar imagem 16x9</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Confirmar</button>
+		</form>
+	</div>
+</div>
+
+<script>
+	const fileInput = document.getElementById('imagem')
+
+	fileInput.addEventListener('change', function(event) {
+	const file = event.target.files[0]
+	const reader = new FileReader()
+
+	reader.onload = function(event) {
+		const imageDataURL = event.target.result
+		
+		Swal.fire({
+			position: 'top-end',
+			title: 'Imagem selecionada',
+			imageUrl: imageDataURL,
+			imageAlt: 'Selected Image',
+			showConfirmButton: false,
+			imageWidth: 200,
+			imageHeight: 200,
+			timer: 2000
+		})
+	}
+	reader.readAsDataURL(file);
+	})
+
+    async function cadastrar(form) {
+            const response = await fetch("/criar", {
+                method: "post",
+                body: new FormData(form),
+            })
+            console.log(response);
+		}
+    $(function () {
+        const formCadastro = $("#formCadastro")
+
+        formCadastro.validate({
+            rules: {
+                titulo: {
+                    required: true,
+                },
+                desc: {
+                    required: true,
+                },
+                autor: {
+                    required: true,
+                },
+                editora: {
+                    required: true,
+                },
+                categoria: {
+                    required: true,
+                },
+                ano: {
+                    required: true,
+                },
+                imagem: {
+                    required: true,
+                },
+            },
+            submitHandler: function (form) {
+                cadastrar(form)
+
+				Swal.fire({
+					icon: 'success',
+					title: `Livro adicionado com sucesso`,
+  					confirmButtonColor: '#007bff',
+					timer: 3000})
+            }
+        })
+    })
+</script>
