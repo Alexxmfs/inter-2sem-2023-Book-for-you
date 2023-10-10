@@ -20,7 +20,7 @@ class LivroRoute {
 		await app.sql.connect(async (sql: app.Sql) => {
             await sql.beginTransaction();
 
-            await sql.query("INSERT INTO livro (titulo, desc, autor, editora, categoria, ano) VALUES (?, ?, ?, ?, ?, ?)", [livros.titulo, livros.desc, livros.autor, livros.editora, livros.categoria, livros.ano]);
+            await sql.query("INSERT INTO livro (titulo, descricao, autor, editora, categoria, ano) VALUES (?, ?, ?, ?, ?, ?)", [livros.titulo, livros.descricao, livros.autor, livros.editora, livros.categoria, livros.ano]);
 
             let idLivro = await sql.scalar("SELECT last_insert_id()");
 
@@ -29,7 +29,7 @@ class LivroRoute {
             await sql.commit();
         });
 
-        return null;
+        res.json(true);
     }
 }
 

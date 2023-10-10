@@ -58,8 +58,7 @@ app_usuarioHashSenhaPadrao=[HASH DA SENHA PADRÃO PARA NOVOS USUÁRIOS]
 app_usuarioHashId=[HASH DE 32 BITS PARA O ID EM HEXADECIMAL, COMO 0x1234ABCD]
 ```
 
-- A pasta `dados` deve ser criada em `/`
-- A pasta `imagens` dee ser criada em `/dados`
+- A pasta `livros` deve ser criada em `/public/img`
 
 # Licença
 
