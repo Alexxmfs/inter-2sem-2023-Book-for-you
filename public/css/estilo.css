@@ -42,7 +42,7 @@ html, body {
 
 
 
-//  <-- footer -->
+  /* <-- footer --> */
 *{
 	margin: 0;
 	padding: 0;
@@ -225,6 +225,37 @@ ul{
 
 .btn-publicar-livro:after {
     display: none;
+}
+
+
+.pretinho{
+	color: black;
+}
+.espacinho{
+	padding-left: 70px;
+}
+.salmaozinho{
+	color: #CA765E;
+}
+.cinzinha{
+	color: #636363;
+}
+.fundinho{
+	background-image: url("../../public/img/background.png");
+}
+.centrinho{
+	text-align: center;
+}
+.espacinho1{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.espacinhocabecalho{
+	padding-top: 50px;
+}
+
+.espacinhoimg{
+	padding-top: 30px;
 }
 
 
