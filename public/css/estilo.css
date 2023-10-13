@@ -257,5 +257,28 @@ ul{
 .espacinhoimg{
 	padding-top: 30px;
 }
+ 
+.botao-sobre {
+	/* box-shadow: 0 0 5px #ca765e, 0 0 25px #ca765e; */
+	background-color: #ca765e;
+	color: #fff;
+	border-radius: 10px;
+	width: 120px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	padding: 10px;
+	border: none;
+  }
 
+  .nome{
+	color: #141f59;
+  }
 
+  .espacocimasobre{
+	padding-top: 50px;
+	padding-bottom: 50px;
+  }
+
+  .espacofoto{
+	padding-bottom: 10px;
+  }
