@@ -160,40 +160,6 @@ ul{
 	margin: 0 20px; /* Adicione margem entre os nav-links se desejar */
 }
 
-/* .teste { */
-    /* position: relative; */
-    /* text-decoration: none;
-    color: #a0a0a0; */
-    /* font-size: 18px; */
-    /* letter-spacing: 0.5px;
-    padding: 0 10px;
-    position: relative;
-} */
-
-/* .navbar-nav > .teste:not(.btn-publicar-livro):hover:after {
-    width: 70%;
-}
-
-.teste .btn-publicar-livro:after {
-    content: "";
-    position: absolute;
-    background-color: #CA765E;
-    height: 3px;
-    width: 0;
-    left: 50%;
-    bottom: -7px;
-    transition: width 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.teste:hover{
-	color: #FFFFFF;
-}
-
-.teste:hover:after{
-	width: 100%;
-} */
-
 .btn-publicar-livro {
     padding: 7px;
     background-color: #CA765E;
@@ -209,12 +175,36 @@ ul{
 
 .btn-publicar-livro:hover {
     background-color: #ff8b33;
+	text-decoration: none;
     transform: scale(1.1);
 }
 
+.btn-ver-mais {
+    padding: 7px 18px 7px 18px;
+    background-color: #CA765E;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 130px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+}
+
+.btn-ver-mais:hover {
+    background-color: #ff8b33;
+	text-decoration: none;
+    transform: scale(1.1);
+}
+
+.container-btn-ver-mais{
+	padding-left: 16px;
+}
 .Nm-logo{
 	font-weight: 500;
 	font-size: 20px;
+	font-weight: 600;
 	padding-left: 10px;
 }
 
@@ -227,18 +217,24 @@ ul{
     display: none;
 }
 
-
 .pretinho{
 	color: black;
 }
+
 .espacinho{
 	padding-left: 70px;
 }
 .salmaozinho{
 	color: #CA765E;
+	font-weight: 700;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-bottom: 10px;
 }
 .cinzinha{
 	color: #636363;
+	padding-left: 20px;
+	padding-bottom: 5px;
 }
 .fundinho{
 	background-image: url("../../public/img/background.png");
