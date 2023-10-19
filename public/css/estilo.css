@@ -39,27 +39,35 @@ html, body {
     padding-top: 20px;
     padding-left: 130px;
 }
+.social-links {
+    display: flex;
+    justify-content: center; /* Alinha os ícones horizontalmente no centro */
+    align-items: center; /* Alinha os ícones verticalmente no centro */
+}
 
-.rodape-col .social-links a {
-	display: flex;
-    /* display: inline-block; */
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
     width: 40px;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    border: 2px solid #aaa9ab; /* Define a largura e a cor da borda */
-    color: #aaa9ab;
+    border: 2px solid #ca765e;
+    color: #ca765e;
     transition: all 0.5s ease;
-    text-decoration: none; /* Remove a sublinhado padrão dos links */
+    text-decoration: none;
 }
 
-.rodape-col .social-links a:hover {
+.social-links a:hover {
     color: #FFF;
-    background-color: #000;
-    border-color: #FFF; /* Muda a cor da borda ao passar o mouse */
+    background-color: #ca765e;
+    border-color: #FFF;
 }
+
+
 
 
   /* <-- footer --> */
