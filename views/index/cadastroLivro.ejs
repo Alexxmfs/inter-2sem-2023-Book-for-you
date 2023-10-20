@@ -80,7 +80,7 @@
 		waitSwal();
 
 		try {
-			const response = await fetch("/livro/criar", {
+			const response = await fetch("/criarLivro/criar", {
 				method: "post",
 				body: new FormData(form),
 			});
