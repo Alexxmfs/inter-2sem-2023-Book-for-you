@@ -5,7 +5,7 @@ class LivroRoute {
 		let livros: any[];
 
 		await app.sql.connect(async (sql: app.Sql) => {
-            livros = await sql.query("SELECT idLivro, titulo, descricao, autor, editora, categoria, ano FROM livro");
+            livros = await sql.query("SELECT idLivro, titulo, descricao, autor, editora, categoria, ano FROM livro;");
         });
 
 		res.render("index/listar", {
