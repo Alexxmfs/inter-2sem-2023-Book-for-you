@@ -6,18 +6,6 @@ class LivroRoute {
 		res.render("index/cadastroLivro");
 	}
 
-    public async listar(req: app.Request, res: app.Response) {
-		let livros: any[];
-
-		await app.sql.connect(async (sql: app.Sql) => {
-            livros = await sql.query("SELECT idLivro, titulo, descricao, autor, editora, categoria, ano FROM livro");
-        });
-
-		res.render("index/listar", {
-			livros: livros
-		});
-	};
-
 	@app.http.post()
     @app.route.formData()
     public async criar(req: app.Request, res: app.Response) {

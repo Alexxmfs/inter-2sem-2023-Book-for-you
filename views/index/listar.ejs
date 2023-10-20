@@ -1,3 +1,22 @@
-<h1>Listagem de livros</h1>
+<div>
+  <h1>Listagem de livros</h1>
 
-<p>Total de Livros: ( <%= livros.lenght %> )</p>
+  <p>Total de Livros: ( <%= livros.lenght %> )</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <% for(let contador = 0; contador < livros.lenght; contador++){ %>
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <div class="card shadow my-4 col-lg-5">
+                    <h2><div class="card-header align-center">
+                        <%= livros[contador].titulo %>
+                    </div></h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <img class="card-img-top embed-responsive-item" src="/public/img/L"
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
