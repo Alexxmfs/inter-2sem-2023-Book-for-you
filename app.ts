@@ -1,6 +1,9 @@
-﻿import app = require("teem");
+﻿const app = require("teem");
+const dotenv = require("dotenv");
 
-require("dotenv").config({ encoding: "utf8", path: app.currentDirectoryName() + "/../.env" });
+dotenv.config({ encoding: "utf8", path: app.currentDirectoryName() + "/../.env" });
+
+const PORT = process.env.PORT || 3000; 
 
 app.run({
 	// Configurações de acesso ao banco de dados.
@@ -14,5 +17,8 @@ app.run({
 		user: process.env.mysqluser,
 		password: process.env.mysqlpassword,
 		database: process.env.mysqldatabase
-	}
+	},
+	port: PORT
 });
+
+console.log(`O servidor está rodando na porta http://localhost:${PORT}`);
