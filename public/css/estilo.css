@@ -247,11 +247,13 @@ ul{
 }
 
 .pretinho{
+	text-decoration: none !important;
 	color: black;
 }
 
 .espacinho{
-	padding-left: 70px;
+	padding-left: 200px;
+	text-decoration: none !important;
 }
 .salmaozinho{
 	color: #CA765E;
@@ -311,4 +313,44 @@ ul{
 
   .test-mais-texto{
 	padding: 0;
-  }
+	width: 100%;
+}
+
+.underline:after{
+	content: '';
+	position: absolute;
+	background-color: #CA765E;
+	text-decoration: none !important;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -6px;
+	transition: 0.3s;
+}
+
+.underline{
+	position: relative;
+	text-decoration: none !important;
+	font-family: 'Poppins', sans-serif;
+	color: #636363;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	padding: 0 10px;
+}
+
+.underline:hover:after{
+	width: 100%;
+	text-decoration: none !important;
+}
+
+.navbar-nav{
+	text-decoration: none !important;
+}
+
+.navbar-underline{
+	display: flex;
+	justify-content: spacing-around;
+	margin: auto;
+	align-items: center;
+	min-width: 600px;
+}
