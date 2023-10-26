@@ -23,43 +23,32 @@ Os membros podem listar os livros que desejam trocar, explorar a coleção de ou
 
 # Detalhes de Configuração
 
-```
-Aqui deve ser colocado o conteúdo do arquivo .env e/ou de outros arquivos de configuração, ou detalhes de arquivos ou pastas que não estão no repositório do projeto, mas que devem existir para que o projeto possa ser executado com sucesso.
-
-Por exemplo, a descrição do conteúdo do arquivo .env, ou nomes de pastas que precisam existir.
-
-(Remover esse aviso na versão final)
-```
-
 Para funcionar corretamente, devem ser criados os seguintes arquivos/pastas nos caminhos especificados, com o conteúdo especificado:
 
 - O arquivo `.env` deve ser criado em `/`, com o conteúdo abaixo:
 ```
-app_localIp=0.0.0.0
-app_port=3000
-app_root=
-# Não pode terminar com barra /
-app_urlSite=http://localhost:3000
-app_cookie=[NOME DO COOKIE]
-app_cookieSecure=0
-app_staticFilesDir=public
-app_disableStaticFiles=0
-app_sqlConfig_connectionLimit=30
-app_sqlConfig_waitForConnections=1
-app_sqlConfig_charset=utf8mb4
-app_sqlConfig_host=localhost
-app_sqlConfig_port=3306
-app_sqlConfig_user=[USUÁRIO DO BANCO]
-app_sqlConfig_password=[SENHA DO USUÁRIO DO BANCO]
-app_sqlConfig_database=[NOME DO BANCO]
-app_usuarioSenhaPadrao=[SENHA PADRÃO PARA NOVOS USUÁRIOS]
-app_usuarioHashSenhaPadrao=[HASH DA SENHA PADRÃO PARA NOVOS USUÁRIOS]
-# Não utilizar números > 0x7FFFFFFF pois os XOR resultarão em -1
-app_usuarioHashId=[HASH DE 32 BITS PARA O ID EM HEXADECIMAL, COMO 0x1234ABCD]
+mysqlhost=localhost
+mysqlport=3306
+mysqluser=[USUÁRIO DO BANCO]
+mysqlpassword=[SENHA DO USUÁRIO DO BANCO]
+mysqldatabase=[NOME DO BANCO]
 ```
 
-- A pasta `livros` deve ser criada em `/public/img`
+- A pasta `receitas` deve ser criada em `/public/img`
 
 # Licença
 
 Este projeto é licenciado sob a [MIT License](https://github.com/tech-espm/inter-2sem-2023-eventos/blob/main/LICENSE).
+
+<h2><b>Tecnologias Utilizadas</b></h2>
+
+  <div style="display: inline_block"><br>
+  <img align="center" alt="Alex-Ejs" height="60" width="60" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_ejs_icon_130626.png"          hspace="10">
+
+  <img align="center" alt="Alex-TypeScript" height="60" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" hspace="10" />
+  
+   <img align="center" alt="Alex-JavaScript" height="60" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" hspace="10" />
+
+  </div>
+
+
