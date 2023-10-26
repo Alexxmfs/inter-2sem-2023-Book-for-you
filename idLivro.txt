@@ -1,0 +1,1 @@
+<a href="livro/editar?idLivro=<%= livros[i].idLivro %>">Editar</a>
