@@ -1,160 +1,160 @@
-	<div class="cadastro-container container-fluid my-5">
-		<h1 class="mb-5">
-			Cadastro Livros
-		</h1>
+<div class="cadastro-container container-fluid my-5">
+	<h1 class="mb-5">
+		Cadastro Livros
+	</h1>
 
-		<div class="container">
-			<form id="formCadastro" class="row">
-				<!-- Coluna dos inputs de texto -->
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="titulo" class="cadastro-title">Titulo</label>
-						<input type="text" class="form-control" id="titulo" name="titulo">
-					</div>
-					<div class="form-group">
-						<label for="descricao">Descrição</label>
-						<input type="text" class="form-control" id="descricao" name="descricao">
-					</div>
-					<div class="form-group">
-						<label for="autor">Autor</label>
-						<input type="text" class="form-control" id="autor" name="autor">
-					</div>
-					<div class="form-group">
-						<label for="categoria">Categoria</label>
-						<select id="categoria" class="form-control" name="categoria">
-							<option value="Conto">Conto</option>
-							<option value="Terror">Terror</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="ano">Ano</label>
-						<input type="text" class="form-control" id="ano" name="ano">
-					</div>
+	<div class="container">
+		<form id="formCadastro" class="row">
+			<!-- Coluna dos inputs de texto -->
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo" class="cadastro-title">Titulo</label>
+					<input type="text" class="form-control" id="titulo" name="titulo">
+				</div>
+				<div class="form-group">
+					<label for="descricao">Descrição</label>
+					<input type="text" class="form-control" id="descricao" name="descricao">
+				</div>
+				<div class="form-group">
+					<label for="autor">Autor</label>
+					<input type="text" class="form-control" id="autor" name="autor">
+				</div>
+				<div class="form-group">
+					<label for="categoria">Categoria</label>
+					<select id="categoria" class="form-control" name="categoria">
+						<option value="Conto">Conto</option>
+						<option value="Terror">Terror</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="ano">Ano</label>
+					<input type="text" class="form-control" id="ano" name="ano">
+					<p></p>
+					<a><button type="submit" class="btn btn-primary">Confirmar</button></a>
+				</div>
+			</div>
+	
+			<div class="col-md-6">
+				<div class="hero">
+					<label for="imagem" id="drop-area">
+						<input type="file" accept="image/*" id="imagem" name="imagem" hidden>
+						<div id="img-view">
+							<img src="../../public/img/icon-upload.png">
+							<p>Drag and drop or click here<br> to upload image</p>
+							<span>Upload any images from desktop</span>
+						</div>
+
+					</label>
 				</div>
 		
-				<div class="col-md-6">
-					<div class="hero">
-						<label for="imagem" id="drop-area">
-							<input type="file" accept="image/*" id="imagem" name="imagem" hidden>
-							<div id="img-view">
-								<img src="../../public/img/icon-upload.png">
-								<p>Drag and drop or click here<br> to upload image</p>
-								<span>Upload any images from desktop</span>
-							</div>
-						</label>
-					</div>
-			
-					<button type="submit" class="btn btn-primary">Confirmar</button>
-				</div>
-			</form>
-		</div>
+			</div>
+		</form>
 	</div>
-	
-	
-	
-	
-	
-	
-			</form>
-				
-				<script>
-					const fileInput = document.getElementById('imagem');
-					const dropArea = document.getElementById("drop-area");
-					const imageView = document.getElementById("img-view");
-				
-					fileInput.addEventListener('change', function(event) {
-						const file = event.target.files[0];
-						const reader = new FileReader();
-				
-						reader.onload = function(event) {
-							const imageDataURL = event.target.result;
-				
-							Swal.fire({
-								position: 'top-end',
-								title: 'Imagem selecionada',
-								imageUrl: imageDataURL,
-								imageAlt: 'Selected Image',
-								showConfirmButton: false,
-								imageWidth: 200,
-								imageHeight: 200,
-								timer: 2000
-							});
-						};
-						reader.readAsDataURL(file);
-					});
-				
-					fileInput.addEventListener("change", uploadImage);
-				
-					function uploadImage() {
-						let imgLink = URL.createObjectURL(fileInput.files[0]);
-						imageView.style.backgroundImage = `url(${imgLink})`;
-						imageView.textContent = "";
-						imageView.style.border = 0;
-					}
-				
-					dropArea.addEventListener("dragover", function(e) {
-						e.preventDefault();
-					});
-				
-					dropArea.addEventListener("drop", function(e) {
-						e.preventDefault();
-					});
+</div>
 
-    async function cadastrar(form) {
-		waitSwal();
 
-		try {
-			const response = await fetch("/livro/criar", {
-				method: "post",
-				body: new FormData(form),
-			});
 
-			if (!response.ok) {
-				await exibirErro(response);
-				return;
-			}
 
-			Swal.fire({
-				icon: 'success',
-				title: `Livro adicionado com sucesso`,
-			})
-		} catch (ex) {
-			Swal.fire({
-				icon: 'error',
-				title: `Erro ao cadastrar o livro: ${ex.message}`,
-			})
+
+			
+			<script>
+				const fileInput = document.getElementById('imagem');
+				const dropArea = document.getElementById("drop-area");
+				const imageView = document.getElementById("img-view");
+			
+				fileInput.addEventListener('change', function(event) {
+					const file = event.target.files[0];
+					const reader = new FileReader();
+			
+					reader.onload = function(event) {
+						const imageDataURL = event.target.result;
+			
+						Swal.fire({
+							position: 'top-end',
+							title: 'Imagem selecionada',
+							imageUrl: imageDataURL,
+							imageAlt: 'Selected Image',
+							showConfirmButton: false,
+							imageWidth: 200,
+							imageHeight: 200,
+							timer: 2000
+						});
+					};
+					reader.readAsDataURL(file);
+				});
+			
+				fileInput.addEventListener("change", uploadImage);
+			
+				function uploadImage() {
+					let imgLink = URL.createObjectURL(fileInput.files[0]);
+					imageView.style.backgroundImage = `url(${imgLink})`;
+					imageView.textContent = "";
+					imageView.style.border = 0;
+				}
+			
+				dropArea.addEventListener("dragover", function(e) {
+					e.preventDefault();
+				});
+			
+				dropArea.addEventListener("drop", function(e) {
+					e.preventDefault();
+				});
+
+async function cadastrar(form) {
+	waitSwal();
+
+	try {
+		const response = await fetch("/livro/criar", {
+			method: "post",
+			body: new FormData(form),
+		});
+
+		if (!response.ok) {
+			await exibirErro(response);
+			return;
 		}
-	}
-    $(function () {
-        const formCadastro = $("#formCadastro")
 
-        formCadastro.validate({
-            rules: {
-                titulo: {
-                    required: true,
-                },
-                descricao: {
-                    required: true,
-                },
-                autor: {
-                    required: true,
-                },
-                categoria: {
-                    required: true,
-                },
-                ano: {
-                    required: true,
-                },
-                imagem: {
-                    required: true,
-                },
-            },
-            submitHandler: function (form) {
-                cadastrar(form)
-            }
-        });
-    });
-	
+		Swal.fire({
+			icon: 'success',
+			title: `Livro adicionado com sucesso`,
+		})
+	} catch (ex) {
+		Swal.fire({
+			icon: 'error',
+			title: `Erro ao cadastrar o livro: ${ex.message}`,
+		})
+	}
+}
+$(function () {
+	const formCadastro = $("#formCadastro")
+
+	formCadastro.validate({
+		rules: {
+			titulo: {
+				required: true,
+			},
+			descricao: {
+				required: true,
+			},
+			autor: {
+				required: true,
+			},
+			categoria: {
+				required: true,
+			},
+			ano: {
+				required: true,
+			},
+			imagem: {
+				required: true,
+			},
+		},
+		submitHandler: function (form) {
+			cadastrar(form)
+		}
+	});
+});
+
 
 
 
