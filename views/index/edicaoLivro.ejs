@@ -1,6 +1,6 @@
 <div class="cadastro-container container-fluid my-5">
 	<h1 class="mb-5">
-		Cadastro Livros
+		Editar
 	</h1>
 
 	<div class="container">
@@ -99,8 +99,8 @@ async function cadastrar(form) {
 	waitSwal();
 
 	try {
-		const response = await fetch("/livro/criar", {
-			method: "post",
+		const response = await fetch("/livro/editar", {
+			method: "put",
 			body: new FormData(form),
 		});
 

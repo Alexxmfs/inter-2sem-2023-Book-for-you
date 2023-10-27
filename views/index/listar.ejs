@@ -19,8 +19,10 @@
                     <li class="list-group-item"> Editora: <%= livros[contador].editora %></li>
                     <li class="list-group-item"> Categoria: <%= livros[contador].categoria %></li>
                     <li class="list-group-item"> Ano: <%= livros[contador].ano %></li>
+                    <a href="livro/edicaoLivro?idLivro=<%= livros[contador].idLivro %>">Editar</a>
                 </ul>
             </div>
+
         </div>
     <% } %>
     </div>
