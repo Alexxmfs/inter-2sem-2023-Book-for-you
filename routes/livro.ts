@@ -16,7 +16,7 @@ class LivroRoute {
         }
 
         await app.sql.connect(async (sql: app.Sql) => {
-            const lista: any[] = await sql.query("SELECT idLivro, titulo, descricao, autor, editora, categoria, ano FROM livro WHERE idLivro = ?", [idLivro]);
+            const lista: any[] = await sql.query("SELECT idLivro, titulo, descricao, autor, categoria, ano FROM livro WHERE idLivro = ?", [idLivro]);
             livro = lista[0];
         });
 
@@ -44,7 +44,7 @@ class LivroRoute {
 		await app.sql.connect(async (sql: app.Sql) => {
             await sql.beginTransaction();
 
-            await sql.query("INSERT INTO livro (titulo, descricao, autor, editora, categoria, ano) VALUES (?, ?, ?, ?, ?, ?)", [livros.titulo, livros.descricao, livros.autor, livros.editora, livros.categoria, livros.ano]);
+            await sql.query("INSERT INTO livro (titulo, descricao, autor, categoria, ano) VALUES (?, ?, ?, ?, ?)", [livros.titulo, livros.descricao, livros.autor, livros.categoria, livros.ano]);
 
             let idLivro = await sql.scalar("SELECT last_insert_id()");
 
@@ -69,8 +69,8 @@ class LivroRoute {
                 return;
             }
 
-            await sql.query("UPDATE livro SET titulo = ?, descricao = ?, autor = ?, editora = ?, categoria = ?, ano = ? WHERE idLivro = ?", 
-                [livroAtualizado.titulo, livroAtualizado.descricao, livroAtualizado.autor, livroAtualizado.editora, livroAtualizado.categoria, livroAtualizado.ano, idLivro]);
+            await sql.query("UPDATE livro SET titulo = ?, descricao = ?, autor = ?, categoria = ?, ano = ? WHERE idLivro = ?", 
+                [livroAtualizado.titulo, livroAtualizado.descricao, livroAtualizado.autor, livroAtualizado.categoria, livroAtualizado.ano, idLivro]);
 
             const livroAtualizadoNoBanco = await sql.query("SELECT * FROM livro WHERE idLivro = ?", [idLivro]);
 
@@ -86,7 +86,7 @@ class LivroRoute {
 		let livros: any[];
 
 		await app.sql.connect(async (sql: app.Sql) => {
-            livros = await sql.query("SELECT idLivro, titulo, descricao, autor, editora, categoria, ano FROM livro;");
+            livros = await sql.query("SELECT idLivro, titulo, descricao, autor, categoria, ano FROM livro;");
         });
 
 		res.render("index/listar", {
