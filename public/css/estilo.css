@@ -455,3 +455,8 @@ ul{
 	padding-top: 20px;
 	padding-bottom: 20px;	
 }
+
+.container-listar{
+	width: 100%;
+	background-color: #141f59;
+}
