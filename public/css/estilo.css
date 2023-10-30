@@ -444,3 +444,14 @@ ul{
 	text-decoration: none;
     transform: scale(1.1); /* Aumenta o tamanho em 10% quando em hover */
 }
+
+.estrela {
+    width: 30%; /* Largura inicial */
+    height: auto; /* Altura automática para manter a proporção original */
+    max-width: 100%; /* Garante que a largura não ultrapasse o contêiner pai */
+}
+
+.image-livro-detail{
+	padding-top: 20px;
+	padding-bottom: 20px;	
+}

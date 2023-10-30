@@ -1,42 +1,21 @@
-<!-- <h1>Olá aqui e o detalhe do Livro 😊</h1>
-
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-sm-5 col-md-5 col-lg-5">
-            <div class="card shadow my-4" style="width: 35rem;">
-                <h2><div class="card-header align-center">
-                    <%= livros.titulo %>
-                </div></h2>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <img class="card-img-top embed-responsive-item" src="/public/img/livros/<%= livros.idLivro %>.jpg" alt="Card image cap">
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"> Descrição: <%= livros.descricao %> </li>
-                    <li class="list-group-item"> Autor: <%= livros.autor %></li>
-                    <li class="list-group-item"> Editora: <%= livros.editora %></li>
-                    <li class="list-group-item"> Categoria: <%= livros.categoria %></li>
-                    <li class="list-group-item"> Ano: <%= livros.ano %></li>
-                    <a href="livro/edicaoLivro?idLivro=<%= livros.idLivro %>">Editar</a>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</div> -->
-
-
-<div class="container-fluid">
+<div class="container-fluid fundinho">
     <div class="row">
-        <div class="col-sm-6">
-            <img class="" src="/public/img/livros/<%= livros.idLivro %>.jpg" alt="Card image cap">
+        <div class="col-sm-6 d-flex align-items-center">
+            <img class="image-livro-detail img-fluid mx-auto" src="/public/img/livros/<%= livros.idLivro %>.jpg" alt="Card image cap">
         </div>
 
         <div class="col-sm-6">
             <h2><%= livros.titulo %></h2>
 
+            <img src="../../public/img/estrela.png" class="estrela"/>
+
             <h4>Autor: <%= livros.autor %></h4>
 
             <p><%= livros.descricao %></p>
+
+            <p>Lançamento: <%= livros.ano %></p>
+
+            <a>Ver Mais</a>
         </div>
     </div>
 </div>
