@@ -394,3 +394,53 @@ ul{
     color: #777;
     margin-top: 15px;
 }
+
+.card-livro {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px; /* Adicione um espaçamento inferior entre os cards */
+}
+
+.card-livro h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-livro p {
+    color: #666;
+}
+
+.card-img-livro {
+    width: 160px;
+    height: 260px;
+    padding-bottom: 20px;
+}
+
+.autor-text-card{
+	color:#a3a3a3;
+	font-weight: none;
+}
+
+/* Estilo padrão para .hover-card e .card-livro */
+.hover-card, .card-livro {
+	color: #2F3033;
+	text-decoration: none;
+    /* Adicione estilos padrão aqui */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito de transformação */
+}
+
+/* Estilo de hover para .hover-card */
+.hover-card:hover {
+	text-decoration: none;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando em hover */
+}
+
+/* Estilo de hover para .card-livro */
+.card-livro:hover {
+	text-decoration: none;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando em hover */
+}

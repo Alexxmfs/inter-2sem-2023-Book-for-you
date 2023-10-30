@@ -30,6 +30,31 @@ class LivroRoute {
         });
 	}
 
+	public async livroDetalhe(req: app.Request, res: app.Response) {
+		let livros: any = null;
+
+        let idLivro = parseInt(req.query.idLivro as string);
+
+        if (isNaN(idLivro)) {
+            res.status(400).json("Id inválido");
+            return;
+        }
+
+        await app.sql.connect(async (sql: app.Sql) => {
+            const lista: any[] = await sql.query("SELECT idLivro, titulo, descricao, autor, categoria, ano FROM livro WHERE idLivro = ?", [idLivro]);
+            livros = lista[0];
+        });
+
+        if (!livros) {
+            res.status(400).json("Livro não encontrado");
+            return;
+        }
+
+        res.render("index/livroDetalhe", {
+            livros: livros
+        });
+	}
+
 	@app.http.post()
     @app.route.formData()
     public async criar(req: app.Request, res: app.Response) {

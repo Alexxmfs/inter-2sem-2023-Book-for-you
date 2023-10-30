@@ -2,7 +2,7 @@
     <h1>Receitas</h1>
     <p>Total de Livros: ( <%= livros.length %> )</p>
 </div>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row justify-content-center">
         <% for (let contador = 0; contador < livros.length; contador++) { %>
         <div class="col-sm-5 col-md-5 col-lg-5">
@@ -26,4 +26,25 @@
         </div>
     <% } %>
     </div>
+</div> -->
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <% for (let contador = 0; contador < livros.length; contador++) { %>
+                <div class="col-md-4 col-sm-4">
+                <a class="hover-card" href="/livro/livroDetalhe?idLivro=<%= livros[contador].idLivro %>">
+                    <div class="card-livro">
+                        <div>
+                            <img class="card-img-top embed-responsive-item card-img-livro" src="/public/img/livros/<%= livros[contador].idLivro %>.jpg" alt="Card image cap">
+                        </div>
+                        <h4><%= livros[contador].titulo %></h4>
+                        <h6 class="autor-text-card"><%= livros[contador].autor %></h6>
+                    </div>
+                </a> 
+                </div>
+        <% } %>
+    </div>
 </div>
+
+
