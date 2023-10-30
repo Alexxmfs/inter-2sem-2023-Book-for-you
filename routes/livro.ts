@@ -20,6 +20,9 @@ class LivroRoute {
             livro = lista[0];
         });
 
+        console.log(livro);
+        res.json(livro);
+
         if (!livro) {
             res.status(400).json("Livro não encontrado");
             return;

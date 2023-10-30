@@ -100,7 +100,7 @@ async function cadastrar(form) {
 
 	try {
 		const response = await fetch("/livro/editar", {
-			method: "put",
+			method: "post",
 			body: new FormData(form),
 		});
 
