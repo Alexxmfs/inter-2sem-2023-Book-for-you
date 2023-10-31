@@ -1,6 +1,11 @@
 import app = require("teem");
 
 class LivroRoute {
+
+    public async sobre(req: app.Request, res: app.Response) {
+		res.render("index/sobre");
+	}
+
 	public async cadastroLivro(req: app.Request, res: app.Response) {
 		res.render("index/cadastroLivro");
 	}
