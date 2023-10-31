@@ -126,6 +126,26 @@ class LivroRoute {
 			livros: livros
 		});
 	};
+
+    public async deletarLivro(req: app.Request, res: app.Response) {
+        let idLivro = parseInt(req.query.idLivro as string);
+    
+        if (isNaN(idLivro)) {
+            res.status(400).json("Id inválido");
+            return;
+        }
+    
+        await app.sql.connect(async (sql: app.Sql) => {
+            const resultado: any = await sql.query("DELETE FROM livro WHERE idLivro = ?", [idLivro]);
+    
+            if (resultado && resultado.affectedRows && resultado.affectedRows > 0) {
+                res.status(200).json("Livro deletado com sucesso");
+            } else {
+                res.status(400).json("Livro não encontrado");
+            }
+        });
+    }
+
 }
 
 export = LivroRoute;
