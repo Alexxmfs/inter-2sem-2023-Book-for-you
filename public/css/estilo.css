@@ -461,8 +461,23 @@ ul{
     width: 97%;
     background-color: #F3E7DD;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Apenas uma propriedade justify-content deve ser usada aqui */
     align-items: center;
-    height: 35vh; 
-	border-radius: 15px;
+    height: 40vh; 
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.text-listar{
+	padding-top: 60px;
+	padding-bottom: 10px;
+}
+
+.button-slide{
+	background-color: #CA765E;
+	padding: 6px 12px 6px 12px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 5px;
+	font-size: 16px;
 }

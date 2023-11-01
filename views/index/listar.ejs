@@ -3,19 +3,24 @@
     <p>Total de Livros: ( <%= livros.length %> )</p>
 </div>
 
-<div class="container-listar">  
+<div class="container-listar" style="display: flex; align-items: center;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                
+                <h4 class="text-listar" style="max-width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sunt sint quo sapiente unde qui?</h4>
+                <a class="button-slide" href="">Ver Mais</a>
             </div>
 
-            <div>
-                <dotlottie-player src="https://lottie.host/75415d5a-eb92-45e0-85de-3aa0e9b90d91/ue4KyYMhbk.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+            <div class="col-sm-6">
+                <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                    <dotlottie-player src="../../public/img/lendoLivroAnimation.json" background="transparent" speed="1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <div class="container-fluid">
     <div class="row justify-content-center">
