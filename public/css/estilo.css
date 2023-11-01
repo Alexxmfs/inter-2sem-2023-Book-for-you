@@ -465,7 +465,8 @@ ul{
     align-items: center;
     height: 40vh; 
     border-radius: 15px;
-    overflow: hidden; 
+    overflow: hidden;
+	padding-bottom: 20px !important; 
 }
 
 .text-listar{
@@ -480,4 +481,8 @@ ul{
 	font-weight: 500;
 	border-radius: 5px;
 	font-size: 16px;
+}
+
+.card-livro-padding{
+	padding-top: 30px;
 }
