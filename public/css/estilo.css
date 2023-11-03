@@ -238,8 +238,9 @@ ul{
 }
 
 .img-logo{
-	width: 43px;
-	height: 47px;
+	padding-top: 12px;
+	padding-left: 5px;
+	width: 120px;
 }
 
 .btn-publicar-livro:after {
