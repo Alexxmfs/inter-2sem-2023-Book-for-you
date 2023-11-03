@@ -486,3 +486,13 @@ ul{
 .card-livro-padding{
 	padding-top: 30px;
 }
+
+input.error {
+	color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+.error{
+	color: red;
+}
