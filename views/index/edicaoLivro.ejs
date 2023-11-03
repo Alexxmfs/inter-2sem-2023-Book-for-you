@@ -6,29 +6,30 @@
 	<div class="container">
 		<form id="formCadastro" class="row">
 			<!-- Coluna dos inputs de texto -->
+			<input type="hidden" id="idLivro" name="idLivro" value="<%= livro.idLivro %>" />
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="titulo" class="cadastro-title">Titulo</label>
-					<input type="text" class="form-control" id="titulo" name="titulo">
+					<input type="text" class="form-control" id="titulo" name="titulo" value="<%= livro.titulo %>" />
 				</div>
 				<div class="form-group">
 					<label for="descricao">Descrição</label>
-					<input type="text" class="form-control" id="descricao" name="descricao">
+					<input type="text" class="form-control" id="descricao" name="descricao" value="<%= livro.descricao %>" />
 				</div>
 				<div class="form-group">
 					<label for="autor">Autor</label>
-					<input type="text" class="form-control" id="autor" name="autor">
+					<input type="text" class="form-control" id="autor" name="autor" value="<%= livro.autor %>" />
 				</div>
 				<div class="form-group">
 					<label for="categoria">Categoria</label>
 					<select id="categoria" class="form-control" name="categoria">
-						<option value="Conto">Conto</option>
-						<option value="Terror">Terror</option>
+						<option value="Conto" <%- (livro.categoria == "Conto" ? 'selected="selected"' : '') %>>Conto</option>
+						<option value="Terror" <%- (livro.categoria == "Terror" ? 'selected="selected"' : '') %>>Terror</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<label for="ano">Ano</label>
-					<input type="text" class="form-control" id="ano" name="ano">
+					<input type="number" class="form-control" id="ano" name="ano" value="<%= livro.ano %>" />
 					<p></p>
 					<a><button type="submit" class="btn btn-primary">Confirmar</button></a>
 				</div>
@@ -100,7 +101,7 @@ async function cadastrar(form) {
 
 	try {
 		const response = await fetch("/livro/editar", {
-			method: "post",
+			method: "put",
 			body: new FormData(form),
 		});
 

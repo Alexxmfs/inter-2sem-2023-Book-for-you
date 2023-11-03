@@ -25,8 +25,8 @@ class LivroRoute {
             livro = lista[0];
         });
 
-        console.log(livro);
-        res.json(livro);
+        //console.log(livro);
+        //res.json(livro);
 
         if (!livro) {
             res.status(400).json("Livro não encontrado");
@@ -81,7 +81,7 @@ class LivroRoute {
 
             let idLivro = await sql.scalar("SELECT last_insert_id()");
 
-            app.fileSystem.saveUploadedFile("/public/img/livros/" + idLivro + ".jpg", imagem);
+            await app.fileSystem.saveUploadedFile("/public/img/livros/" + idLivro + ".jpg", imagem);
 
             await sql.commit();
         });
@@ -90,9 +90,10 @@ class LivroRoute {
     }
 
     @app.http.put()
+	@app.route.formData()
     public async editar(req: app.Request, res: app.Response) {
-        const idLivro: number = parseInt(req.params["idLivro"]);
         const livroAtualizado = req.body;
+        const idLivro: number = parseInt(livroAtualizado.idLivro);
 
         await app.sql.connect(async (sql: app.Sql) => {
             const livroExistente = await sql.query("SELECT * FROM livro WHERE idLivro = ?", [idLivro]);
@@ -109,6 +110,7 @@ class LivroRoute {
 
             if (livroAtualizadoNoBanco) {
                 res.json(livroAtualizadoNoBanco);
+                console.log(livroAtualizadoNoBanco);
             } else {
                 res.status(500).json("Falha ao atualizar o livro");
             }
