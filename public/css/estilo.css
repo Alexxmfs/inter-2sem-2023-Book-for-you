@@ -474,17 +474,9 @@ ul{
 	padding-bottom: 10px;
 }
 
-.button-slide{
-	background-color: #CA765E;
-	padding: 6px 12px 6px 12px;
-	color: #fff;
-	font-weight: 500;
-	border-radius: 5px;
-	font-size: 16px;
-}
-
 .card-livro-padding{
 	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 input.error {
@@ -495,4 +487,38 @@ input.error {
 
 .error{
 	color: red;
+}
+
+.espaco-container-listar{
+	padding-top: 10px;
+}
+
+
+
+.button-slide {
+    padding: 5px 13px 5px 13px;
+    background-color: #CA765E;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block; /* Para garantir que o link seja exibido como bloco */
+    transition: background-color 0.3s, transform 0.2s ease-out;
+}
+
+.button-slide:hover {
+    background-color: #ff8b33;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.button-slide:after {
+    display: none;
+}
+
+.desc-container-slide{
+	color: #8f8c89;
+	font-size: 17px;
 }
