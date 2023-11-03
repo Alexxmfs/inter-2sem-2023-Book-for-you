@@ -141,7 +141,9 @@ class LivroRoute {
             const resultado: any = await sql.query("DELETE FROM livro WHERE idLivro = ?", [idLivro]);
     
             if (resultado && resultado.affectedRows && resultado.affectedRows > 0) {
-                res.status(200).json("Livro deletado com sucesso");
+                // res.redirect('/livro/listarLivro');
+                // res.send('<script>window.onload = function() { alert("Livro deletado com sucesso"); window.location="/livro/listarLivro"; }</script>');
+                
             } else {
                 res.status(400).json("Livro não encontrado");
             }

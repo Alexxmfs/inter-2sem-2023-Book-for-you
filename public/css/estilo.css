@@ -340,6 +340,7 @@ ul{
 }
 
 .underline:hover:after{
+	color: #636363;
 	width: 100%;
 	text-decoration: none !important;
 }
