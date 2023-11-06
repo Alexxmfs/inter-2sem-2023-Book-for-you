@@ -386,12 +386,14 @@ ul{
 }
 
 .card-livro {
-    width: 100%;
+	width: 280px; /* Tamanho fixo do card */
+    height: 400px; /* Altura fixa do card */
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    overflow: hidden; /* Para evitar que o conteúdo ultrapasse as dimensões do card */
 }
 
 .card-livro h1 {
@@ -409,25 +411,26 @@ ul{
     padding-bottom: 20px;
 }
 
-.autor-text-card{
-	color:#a3a3a3;
-	font-weight: none;
+.autor-text-card {
+    color: #a3a3a3;
+    font-weight: none;
 }
 
-.hover-card, .card-livro {
-	color: #2F3033;
-	text-decoration: none;
-    transition: transform 0.3s ease; 
+.hover-card,
+.card-livro {
+    color: #2F3033;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .hover-card:hover {
-	text-decoration: none;
-    transform: scale(1.1); 
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
 .card-livro:hover {
-	text-decoration: none;
-    transform: scale(1.1); 
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
 .estrela {
@@ -460,9 +463,10 @@ ul{
 	padding-bottom: 10px;
 }
 
-.card-livro-padding{
-	padding-top: 30px;
-	padding-bottom: 30px;
+.card-livro-padding {
+    padding: 70px;
+	padding-bottom: 50px !important;
+
 }
 
 input.error {
