@@ -4,14 +4,12 @@ img {
 
 html, body { 
 	font-family: 'Inter', sans-serif;
-	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	min-height: 100vh;
 }
 
 .limitador {
 	max-width: 1200px;
 	margin: 0px auto;
-	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -19,21 +17,13 @@ html, body {
 }
 
 .conteudo {
-	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	flex: 1 1 auto;
 }
-
-/* .rodape { */
-	/* text-align: center; */
-	/* background-color: black; */
-	/* padding: 2rem; */
-/* } */
 
 .link-rodape, .link-rodape:hover {
 	color: white;
 	text-decoration: none;
 } */
-
 
 .rodape-col{
     padding-top: 20px;
@@ -41,8 +31,8 @@ html, body {
 }
 .social-links {
     display: flex;
-    justify-content: center; /* Alinha os ícones horizontalmente no centro */
-    align-items: center; /* Alinha os ícones verticalmente no centro */
+    justify-content: center; 
+    align-items: center;
 }
 
 .social-links a {
@@ -181,11 +171,10 @@ ul{
 .navbar-nav {
 	display: flex;
 	justify-content: center;
-	/* flex-grow: 1; */
 }
 
 .navbar-nav .nav-link {
-	margin: 0 20px; /* Adicione margem entre os nav-links se desejar */
+	margin: 0 20px; 
 }
 
 .btn-publicar-livro {
@@ -287,7 +276,6 @@ ul{
 }
  
 .botao-sobre {
-	/* box-shadow: 0 0 5px #ca765e, 0 0 25px #ca765e; */
 	background-color: #ca765e;
 	color: #fff;
 	border-radius: 10px;
@@ -426,30 +414,26 @@ ul{
 	font-weight: none;
 }
 
-/* Estilo padrão para .hover-card e .card-livro */
 .hover-card, .card-livro {
 	color: #2F3033;
 	text-decoration: none;
-    /* Adicione estilos padrão aqui */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito de transformação */
+    transition: transform 0.3s ease; 
 }
 
-/* Estilo de hover para .hover-card */
 .hover-card:hover {
 	text-decoration: none;
-    transform: scale(1.1); /* Aumenta o tamanho em 10% quando em hover */
+    transform: scale(1.1); 
 }
 
-/* Estilo de hover para .card-livro */
 .card-livro:hover {
 	text-decoration: none;
-    transform: scale(1.1); /* Aumenta o tamanho em 10% quando em hover */
+    transform: scale(1.1); 
 }
 
 .estrela {
-    width: 30%; /* Largura inicial */
-    height: auto; /* Altura automática para manter a proporção original */
-    max-width: 100%; /* Garante que a largura não ultrapasse o contêiner pai */
+    width: 30%; 
+    height: auto; 
+    max-width: 100%; 
 }
 
 .image-livro-detail{
@@ -463,7 +447,7 @@ ul{
     width: 97%;
     background-color: #F3E7DD;
     display: flex;
-    justify-content: center; /* Apenas uma propriedade justify-content deve ser usada aqui */
+    justify-content: center; 
     align-items: center;
     height: 40vh; 
     border-radius: 15px;
@@ -495,8 +479,6 @@ input.error {
 	padding-top: 10px;
 }
 
-
-
 .button-slide {
     padding: 5px 13px 5px 13px;
     background-color: #CA765E;
@@ -506,7 +488,7 @@ input.error {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
-    display: inline-block; /* Para garantir que o link seja exibido como bloco */
+    display: inline-block; 
     transition: background-color 0.3s, transform 0.2s ease-out;
 }
 
