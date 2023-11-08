@@ -5,18 +5,20 @@
         </div>
 
         <div class="col-sm-6">
-            <h3><%= livros.titulo %></h3>
+            <h3 class="titulo-livro-detail"><%= livros.titulo %></h3>
 
             <img src="../../public/img/estrela.png" class="estrela"/>
 
-            <h5>Autor: <%= livros.autor %></h5>
-
-            <p><%= livros.descricao %></p>
+            <h5 class="detail-autor">Autor: <%= livros.autor %></h5>
 
             <p>Lançamento: <%= livros.ano %></p>
 
-            <a href="/livro/listarLivro"><a href="/livro/deletarLivro?idLivro=<%= livros.idLivro %>">Excluir</a></a>
-            <a href="/livro/edicaoLivro?idLivro=<%= livros.idLivro %>">Editar</a>
+            <div class="contain-detail-livro">
+                <p class="desc-detail-livro"><%= livros.descricao %></p>
+            </div>
+
+            <a class="btn-excluir" href="/livro/deletarLivro?idLivro=<%= livros.idLivro %>">Excluir</a>
+            <a class="btn-editar" href="/livro/edicaoLivro?idLivro=<%= livros.idLivro %>">Editar</a>
         </div>
     </div>
 </div>

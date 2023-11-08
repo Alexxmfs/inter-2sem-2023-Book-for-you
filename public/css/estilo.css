@@ -434,6 +434,7 @@ ul{
 }
 
 .estrela {
+	padding-bottom: 10px;
     width: 30%; 
     height: auto; 
     max-width: 100%; 
@@ -509,4 +510,64 @@ input.error {
 .desc-container-slide{
 	color: #8f8c89;
 	font-size: 17px;
+}
+
+.custom-card-spacing {
+	padding: 10px;
+}
+
+.image-livro-detail {
+    max-width: 100%;
+    height: 600px; /* Define uma altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra completamente a área especificada sem distorção */
+}
+
+.titulo-livro-detail{
+	font-weight: 600;
+	font-size: 55px;
+	padding-top: 20px;
+}
+
+.desc-detail-livro {
+    padding-top: 20px;
+	max-width: 480px;
+	color: #666363;
+    word-wrap: break-word; 
+}
+.btn-excluir,
+.btn-editar {
+    display: inline-block;
+    padding: 7px 15px; /* ou 7px 19px para .btn-editar */
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-excluir {
+    background-color: #eb3a34;
+}
+
+.btn-editar {
+    background-color: #4634eb;
+    margin-left: 15px;
+}
+
+.btn-excluir:hover {
+    background-color: #ff564a;
+	text-decoration: none;
+	color: #FFF;
+    transform: scale(1.1); /* Escala do botão quando hover */
+}
+
+.btn-editar:hover {
+	color: #FFF;
+	text-decoration: none;
+    background-color: #6360ee;
+    transform: scale(1.1); /* Escala do botão quando hover */
+}
+
+.detail-autor{
+	color: #929292;
 }
