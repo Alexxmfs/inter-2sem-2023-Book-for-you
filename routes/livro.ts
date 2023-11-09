@@ -94,6 +94,8 @@ class LivroRoute {
     public async editar(req: app.Request, res: app.Response) {
         const livroAtualizado = req.body;
         const idLivro: number = parseInt(livroAtualizado.idLivro);
+	  
+		let imagem = req.uploadedFiles["imagem"];
 
         await app.sql.connect(async (sql: app.Sql) => {
             const livroExistente = await sql.query("SELECT * FROM livro WHERE idLivro = ?", [idLivro]);
@@ -106,14 +108,17 @@ class LivroRoute {
             await sql.query("UPDATE livro SET titulo = ?, descricao = ?, autor = ?, categoria = ?, ano = ? WHERE idLivro = ?", 
                 [livroAtualizado.titulo, livroAtualizado.descricao, livroAtualizado.autor, livroAtualizado.categoria, livroAtualizado.ano, idLivro]);
 
+            if (!sql.affectedRows) {
+                res.status(500).json("Falha ao atualizar o livro");
+                return;
+            }
+
+            if (imagem)
+                await app.fileSystem.saveUploadedFile("/public/img/livros/" + idLivro + ".jpg", imagem);
+
             const livroAtualizadoNoBanco = await sql.query("SELECT * FROM livro WHERE idLivro = ?", [idLivro]);
 
-            if (livroAtualizadoNoBanco) {
-                res.json(livroAtualizadoNoBanco);
-                console.log(livroAtualizadoNoBanco);
-            } else {
-                res.status(500).json("Falha ao atualizar o livro");
-            }
+            res.json(livroAtualizadoNoBanco);
         });
     }
 
