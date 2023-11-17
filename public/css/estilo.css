@@ -593,3 +593,9 @@ input.error {
 	color: #c25a3c;
 	font-weight: 600;
 }
+
+.cor-botoes{
+	background-color: #c25a3c;
+	color: #FFFFFF !important;
+	border: #c25a3c;
+}
