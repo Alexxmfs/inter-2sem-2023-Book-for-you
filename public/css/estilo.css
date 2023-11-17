@@ -587,3 +587,9 @@ input.error {
         transform: translateY(0);
     }
 }
+
+
+.cadastro-title{
+	color: #c25a3c;
+	font-weight: 600;
+}

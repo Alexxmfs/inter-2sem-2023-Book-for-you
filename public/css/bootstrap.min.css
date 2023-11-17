@@ -1910,9 +1910,9 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #fffdfa;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #ecb2a1;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -1933,10 +1933,12 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 .form-control::-webkit-input-placeholder {
+  font-size: 13px;
   color: #6c757d;
   opacity: 1;
 }
 .form-control::-moz-placeholder {
+  font-size: 13px;
   color: #6c757d;
   opacity: 1;
 }
@@ -1970,6 +1972,7 @@ select.form-control:-moz-focusring {
   text-shadow: 0 0 0 #495057;
 }
 select.form-control:focus::-ms-value {
+  font-size: 13px;
   color: #495057;
   background-color: #fff;
 }
