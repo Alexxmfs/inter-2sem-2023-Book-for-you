@@ -568,6 +568,13 @@ input.error {
     transform: scale(1.1); /* Escala do botão quando hover */
 }
 
+.button-troca{
+	padding:4px 15px;
+	border-radius: 5px;
+	background-color: #5291ff;
+	color: #ffffff;
+}
+
 .detail-autor{
 	color: #929292;
 }
