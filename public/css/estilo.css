@@ -29,9 +29,9 @@ html, body {
     padding-top: 20px;
     padding-left: 130px;
 }
+
 .social-links {
     display: flex;
-    justify-content: center; 
     align-items: center;
 }
 
@@ -52,6 +52,35 @@ html, body {
 }
 
 .social-links a:hover {
+    color: #FFF;
+    background-color: #ca765e;
+    border-color: #FFF;
+}
+
+
+.social-links-sobre {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.social-links-sobre a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ca765e;
+    color: #ca765e;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.social-links-sobre a:hover {
     color: #FFF;
     background-color: #ca765e;
     border-color: #FFF;
@@ -259,6 +288,8 @@ ul{
 }
 .fundinho{
 	background-image: url("../../public/img/background.png");
+	/* background-size: cover;
+	background-repeat: no-repeat; */
 }
 .centrinho{
 	text-align: center;
@@ -619,4 +650,13 @@ input.error {
 	background-color: #c25a3c;
 	color: #FFFFFF !important;
 	border: #c25a3c;
+}
+
+.limitador-thiago {
+	max-width: 1200px;
+	margin: 0px auto;
+	min-height: 10vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
